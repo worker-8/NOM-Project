@@ -8,8 +8,8 @@ function Home() {
   const itemsArray = Object.entries(itemsData).map(([id, data]) => ({ id, ...data }))
   const featuredItems = itemsArray.slice(0, 4)
 
-  // Convertir el objeto de monstruos en array y tomar los primeros 4
-  const monstersArray = Object.entries(monstersData).map(([id, data]) => ({ id, ...data }))
+  // Usar directamente el array enemies del nuevo formato
+  const monstersArray = monstersData.enemies || []
   const featuredMonsters = monstersArray.slice(0, 4)
 
   return (
@@ -130,7 +130,7 @@ function Home() {
               <div className="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-slate-900 mb-2">{monstersArray.length}+ Monstruos</h3>
+              <h3 className="font-semibold text-slate-900 mb-2">{monstersArray.length}+ Enemigos</h3>
               <p className="text-sm text-slate-600">Debilidades, resistencias, drops y localizaciones.</p>
             </div>
             <div className="p-6 bg-white rounded-xl">

@@ -6,13 +6,8 @@ import monstersData from '../data/monsters.json'
 function Monsters() {
   const [searchTerm, setSearchTerm] = useState('')
 
-  // Convertir el objeto de monstruos en un array con IDs
-  const monsters = useMemo(() => {
-    return Object.entries(monstersData).map(([id, data]) => ({
-      id,
-      ...data
-    }))
-  }, [])
+  // Usar directamente el array enemies del nuevo formato
+  const monsters = monstersData.enemies || []
 
   const filteredMonsters = useMemo(() => {
     return monsters.filter(monster => {

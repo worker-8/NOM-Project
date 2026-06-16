@@ -5,11 +5,8 @@ import monstersData from '../data/monsters.json'
 function MonsterDetail() {
   const { id } = useParams()
 
-  // Convertir el objeto de monstruos en un array para buscar por ID
-  const monsters = Object.entries(monstersData).map(([key, data]) => ({
-    id: key,
-    ...data
-  }))
+  // Usar directamente el array enemies del nuevo formato
+  const monsters = monstersData.enemies || []
 
   const monster = monsters.find(m => m.id === id)
 

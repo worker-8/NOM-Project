@@ -1,38 +1,44 @@
 {
-  "raton": {
-	"nombre": "Ratón Malulo",
-	"scene": "res://scenes/enemies/raton_malulo.tscn",
-	"vida": 5,
-	"velocidad": 20,
-	"dano_ataque": 3,
-	"oro_min": 3,
-	"oro_max": 6
-  },
-  "slime": {
-	"nombre": "Slime",
-	"scene": "res://scenes/enemies/slime.tscn",
-	"vida": 10,
-	"velocidad": 10,
-	"dano_ataque": 8,
-	"oro_min": 8,
-	"oro_max": 15
-  },
-  "murciegalo": {
-	"nombre": "Murciegalo",
-	"scene": "res://scenes/enemies/murciegalo.tscn",
-	"vida": 3,
-	"velocidad": 35,
-	"dano_ataque": 4,
-	"oro_min": 5,
-	"oro_max": 10
-  },
-  "mimic": {
-	"nombre": "Mimic",
-	"scene": "res://scenes/enemies/placeholder.tscn",
-	"vida": 10,
-	"velocidad": 45,
-	"dano_ataque": 1,
-	"oro_min": 15,
-	"oro_max": 25
-  }
+  "enemies": [
+    {
+      "id": "raton_malulo",
+      "nombre": "Ratón Malulo",
+      "scene": "res://scenes/enemies/raton_malulo.tscn",
+      "vida": 5,
+      "velocidad": 20,
+      "dano_ataque": 3,
+      "oro_min": 3,
+      "oro_max": 6
+    },
+    {
+      "id": "slime",
+      "nombre": "Slime",
+      "scene": "res://scenes/enemies/slime.tscn",
+      "vida": 10,
+      "velocidad": 10,
+      "dano_ataque": 8,
+      "oro_min": 8,
+      "oro_max": 15
+    },
+    {
+      "id": "murciegalo",
+      "nombre": "Murciegalo",
+      "scene": "res://scenes/enemies/murciegalo.tscn",
+      "vida": 3,
+      "velocidad": 35,
+      "dano_ataque": 4,
+      "oro_min": 5,
+      "oro_max": 10
+    },
+    {
+      "id": "mimic",
+      "nombre": "Mimic",
+      "scene": "res://scenes/enemies/mimic.tscn",
+      "vida": 10,
+      "velocidad": 45,
+      "dano_ataque": 1,
+      "oro_min": 15,
+      "oro_max": 25
+    }
+  ]
 }
