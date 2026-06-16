@@ -17,8 +17,8 @@
 	"oro_min": 8,
 	"oro_max": 15
   },
-  "murcielago": {
-	"nombre": "Murciélago",
+  "murciegalo": {
+	"nombre": "Murciegalo",
 	"scene": "res://scenes/enemies/murciegalo.tscn",
 	"vida": 3,
 	"velocidad": 35,
