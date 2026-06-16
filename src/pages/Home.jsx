@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { Sword, Shield, BookOpen, ChevronRight } from 'lucide-react'
 import items from '../data/items.json'
-import monsters from '../data/monsters.json'
+import monstersData from '../data/monsters.json'
 
 function Home() {
   const featuredItems = items.slice(0, 4)
-  const featuredMonsters = monsters.slice(0, 4)
+
+  // Convertir el objeto de monstruos en array y tomar los primeros 4
+  const monstersArray = Object.entries(monstersData).map(([id, data]) => ({ id, ...data }))
+  const featuredMonsters = monstersArray.slice(0, 4)
 
   return (
     <div className="min-h-screen">
@@ -93,13 +96,13 @@ function Home() {
                     className="flex items-center gap-4 p-4 bg-white rounded-lg border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all"
                   >
                     <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-700 font-bold">
-                      {monster.name.charAt(0)}
+                      {monster.nombre.charAt(0)}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-medium text-slate-900 truncate">{monster.name}</h3>
-                      <p className="text-sm text-slate-500">Nv. {monster.level} • {monster.type}</p>
+                      <h3 className="font-medium text-slate-900 truncate">{monster.nombre}</h3>
+                      <p className="text-sm text-slate-500">{monster.vida} HP • {monster.dano_ataque} ATK</p>
                     </div>
-                    <span className="text-sm text-slate-600">{monster.hp} HP</span>
+                    <span className="text-sm text-slate-600">{monster.oro_min}-{monster.oro_max} G</span>
                   </Link>
                 ))}
               </div>
@@ -125,7 +128,7 @@ function Home() {
               <div className="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-slate-900 mb-2">{monsters.length}+ Monstruos</h3>
+              <h3 className="font-semibold text-slate-900 mb-2">{monstersArray.length}+ Monstruos</h3>
               <p className="text-sm text-slate-600">Debilidades, resistencias, drops y localizaciones.</p>
             </div>
             <div className="p-6 bg-white rounded-xl">
