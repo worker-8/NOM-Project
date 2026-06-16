@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://tunombreusuario.github.io/",
+  "homepage": "https://worker-8.github.io/NOM-Project",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
