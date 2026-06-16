@@ -25,5 +25,14 @@
 	"dano_ataque": 4,
 	"oro_min": 5,
 	"oro_max": 10
+  },
+  "mimic": {
+	"nombre": "Mimic",
+	"scene": "res://scenes/enemies/placeholder.tscn",
+	"vida": 10,
+	"velocidad": 45,
+	"dano_ataque": 1,
+	"oro_min": 15,
+	"oro_max": 25
   }
 }
