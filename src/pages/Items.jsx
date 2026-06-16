@@ -1,70 +1,57 @@
 import { useState, useMemo } from 'react'
 import SearchFilter from '../components/SearchFilter'
 import ItemCard from '../components/ItemCard'
-import items from '../data/items.json'
+import itemsData from '../data/items.json'
 
 function Items() {
   const [searchTerm, setSearchTerm] = useState('')
   const [typeFilter, setTypeFilter] = useState('all')
-  const [rarityFilter, setRarityFilter] = useState('all')
+
+  // Convertir el objeto de items a array con IDs
+  const items = useMemo(() => {
+    return Object.entries(itemsData).map(([id, data]) => ({
+      id,
+      ...data
+    }))
+  }, [])
 
   const typeOptions = [
     { value: 'all', label: 'Todos los tipos' },
-    { value: 'consumible', label: 'Consumibles' },
-    { value: 'arma', label: 'Armas' },
-    { value: 'armadura', label: 'Armaduras' },
-    { value: 'accesorio', label: 'Accesorios' },
-    { value: 'material', label: 'Materiales' }
-  ]
-
-  const rarityOptions = [
-    { value: 'all', label: 'Todas las rarezas' },
-    { value: 'comun', label: 'Común' },
-    { value: 'raro', label: 'Raro' },
-    { value: 'epico', label: 'Épico' },
-    { value: 'legendario', label: 'Legendario' }
+    { value: 'arma', label: 'Armas' }
   ]
 
   const filteredItems = useMemo(() => {
     return items.filter(item => {
-      const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          item.description.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesType = typeFilter === 'all' || item.type === typeFilter
-      const matchesRarity = rarityFilter === 'all' || item.rarity === rarityFilter
-      
-      return matchesSearch && matchesType && matchesRarity
+      const matchesSearch = item.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+      const matchesType = typeFilter === 'all' || item.tipo === typeFilter
+
+      return matchesSearch && matchesType
     })
-  }, [searchTerm, typeFilter, rarityFilter])
+  }, [searchTerm, typeFilter, items])
 
   return (
     <div className="py-8 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Items</h1>
-          <p className="text-slate-600">Catálogo completo de armas, armaduras, consumibles y más.</p>
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">Armas</h1>
+          <p className="text-slate-600">Catálogo de armas con estadísticas de daño, crítico y velocidad.</p>
         </div>
 
         <div className="space-y-3 mb-6">
           <SearchFilter
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}
+            placeholder="Buscar armas..."
           />
-          <div className="flex flex-col sm:flex-row gap-3">
-            <SearchFilter
-              filters={typeOptions}
-              activeFilter={typeFilter}
-              onFilterChange={setTypeFilter}
-            />
-            <SearchFilter
-              filters={rarityOptions}
-              activeFilter={rarityFilter}
-              onFilterChange={setRarityFilter}
-            />
-          </div>
+          <SearchFilter
+            filters={typeOptions}
+            activeFilter={typeFilter}
+            onFilterChange={setTypeFilter}
+          />
         </div>
 
         <div className="mb-4 text-sm text-slate-500">
-          Mostrando {filteredItems.length} de {items.length} items
+          Mostrando {filteredItems.length} de {items.length} armas
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -75,7 +62,7 @@ function Items() {
 
         {filteredItems.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-slate-500">No se encontraron items con esos filtros.</p>
+            <p className="text-slate-500">No se encontraron armas con esos filtros.</p>
           </div>
         )}
       </div>

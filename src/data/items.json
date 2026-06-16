@@ -1,108 +1,92 @@
-[
-  {
-    "id": "potion",
-    "name": "Poción de Vida",
-    "type": "consumible",
-    "rarity": "comun",
-    "description": "Restaura 50 puntos de salud al consumirla.",
-    "effect": "+50 HP",
-    "value": 25
+{
+  "pistola": {
+    "nombre": "Pistola",
+    "maid_tipo": "maid_pistola",
+    "tipo": "arma",
+    "dano_min": 1,
+    "dano_max": 3,
+    "critico": 5,
+    "velocidad_ataque": 0.1
   },
-  {
-    "id": "hi-potion",
-    "name": "Superpoción",
-    "type": "consumible",
-    "rarity": "raro",
-    "description": "Restaura 150 puntos de salud. Efecto más potente que la poción normal.",
-    "effect": "+150 HP",
-    "value": 100
+  "revolver": {
+    "nombre": "Revolver",
+    "maid_tipo": "maid_revolver",
+    "tipo": "arma",
+    "dano_min": 3,
+    "dano_max": 7,
+    "critico": 12,
+    "velocidad_ataque": -0.1
   },
-  {
-    "id": "ether",
-    "name": "Éter",
-    "type": "consumible",
-    "rarity": "raro",
-    "description": "Restaura 50 puntos de maná mágico.",
-    "effect": "+50 MP",
-    "value": 75
+  "uzi": {
+    "nombre": "UZI",
+    "maid_tipo": "maid_uzi",
+    "tipo": "arma",
+    "dano_min": 1,
+    "dano_max": 4,
+    "critico": 7,
+    "velocidad_ataque": 0.35
   },
-  {
-    "id": "iron-sword",
-    "name": "Espada de Hierro",
-    "type": "arma",
-    "rarity": "comun",
-    "description": "Espada básica forjada en hierro. Equilibrio entre peso y daño.",
-    "stats": { "atk": 15, "def": 0 },
-    "value": 150
+  "minigun": {
+    "nombre": "Minigun",
+    "maid_tipo": "maid_minigun",
+    "tipo": "arma",
+    "dano_min": 4,
+    "dano_max": 9,
+    "critico": 10,
+    "velocidad_ataque": 0.45
   },
-  {
-    "id": "flame-sword",
-    "name": "Espada Ígnea",
-    "type": "arma",
-    "rarity": "epico",
-    "description": "Espada imbuida con el poder del fuego. Causa daño adicional de fuego.",
-    "stats": { "atk": 35, "def": 0, "fire": 10 },
-    "value": 1200
+  "rifle_asalto": {
+    "nombre": "Rifle de Asalto",
+    "maid_tipo": "maid_rifle_asalto",
+    "tipo": "arma",
+    "dano_min": 6,
+    "dano_max": 14,
+    "critico": 15,
+    "velocidad_ataque": 0.15
   },
-  {
-    "id": "leather-armor",
-    "name": "Armadura de Cuero",
-    "type": "armadura",
-    "rarity": "comun",
-    "description": "Armadura ligera hecha de cuero endurecido. Ofrece protección básica.",
-    "stats": { "atk": 0, "def": 8 },
-    "value": 80
+  "melee": {
+    "nombre": "Arma Cuerpo a Cuerpo",
+    "maid_tipo": "maid_melee",
+    "tipo": "arma",
+    "dano_min": 8,
+    "dano_max": 18,
+    "critico": 20,
+    "velocidad_ataque": 0.0
   },
-  {
-    "id": "steel-plate",
-    "name": "Coraza de Acero",
-    "type": "armadura",
-    "rarity": "raro",
-    "description": "Armadura pesada de placas de acero. Excelente defensa a costa de movilidad.",
-    "stats": { "atk": 0, "def": 25 },
-    "value": 450
+  "bazuka": {
+    "nombre": "Bazuka",
+    "maid_tipo": "maid_bazuka",
+    "tipo": "arma",
+    "dano_min": 20,
+    "dano_max": 45,
+    "critico": 25,
+    "velocidad_ataque": -0.7
   },
-  {
-    "id": "phoenix-feather",
-    "name": "Pluma de Fénix",
-    "type": "accesorio",
-    "rarity": "legendario",
-    "description": "Pluma legendaria que revive al portador una vez al caer en combate.",
-    "effect": "Auto-revive (1 vez)",
-    "value": 5000
+  "escopeta": {
+    "nombre": "Escopeta",
+    "maid_tipo": "maid_escopeta",
+    "tipo": "arma",
+    "dano_min": 10,
+    "dano_max": 24,
+    "critico": 22,
+    "velocidad_ataque": -0.3
   },
-  {
-    "id": "speed-boots",
-    "name": "Botas de Velocidad",
-    "type": "accesorio",
-    "rarity": "raro",
-    "description": "Botas encantadas que aumentan la velocidad de movimiento.",
-    "effect": "+25% Velocidad",
-    "value": 350
+  "francotirador": {
+    "nombre": "Francotirador",
+    "maid_tipo": "maid_francotirador",
+    "tipo": "arma",
+    "dano_min": 25,
+    "dano_max": 60,
+    "critico": 40,
+    "velocidad_ataque": -0.8
   },
-  {
-    "id": "crystal-shard",
-    "name": "Fragmento de Cristal",
-    "type": "material",
-    "rarity": "raro",
-    "description": "Fragmento de cristal mágico usado en encantamientos avanzados.",
-    "value": 200
-  },
-  {
-    "id": "ancient-scroll",
-    "name": "Pergamino Antiguo",
-    "type": "consumible",
-    "rarity": "epico",
-    "description": "Contiene un hechizo olvidado. Desbloquea nuevas habilidades.",
-    "effect": "Aprende habilidad aleatoria",
-    "value": 800
-  },
-  {
-    "id": "dragon-scale",
-    "name": "Escama de Dragón",
-    "type": "material",
-    "rarity": "legendario",
-    "description": "Escama resistente como el acero pero ligera como el cuero. Material de forja supremo.",
-    "value": 2500
+  "ninja": {
+    "nombre": "Arma Ninja",
+    "maid_tipo": "maid_ninja",
+    "tipo": "arma",
+    "dano_min": 7,
+    "dano_max": 16,
+    "critico": 30,
+    "velocidad_ataque": 0.25
   }
-]
+}

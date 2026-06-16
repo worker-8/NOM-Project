@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Sword, Shield, BookOpen, ChevronRight } from 'lucide-react'
-import items from '../data/items.json'
+import itemsData from '../data/items.json'
 import monstersData from '../data/monsters.json'
 
 function Home() {
-  const featuredItems = items.slice(0, 4)
+  // Convertir el objeto de items a array y tomar los primeros 4
+  const itemsArray = Object.entries(itemsData).map(([id, data]) => ({ id, ...data }))
+  const featuredItems = itemsArray.slice(0, 4)
 
   // Convertir el objeto de monstruos en array y tomar los primeros 4
   const monstersArray = Object.entries(monstersData).map(([id, data]) => ({ id, ...data }))
@@ -66,13 +68,13 @@ function Home() {
                     className="flex items-center gap-4 p-4 bg-white rounded-lg border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all"
                   >
                     <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-700 font-bold">
-                      {item.name.charAt(0)}
+                      {item.nombre.charAt(0)}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-medium text-slate-900 truncate">{item.name}</h3>
-                      <p className="text-sm text-slate-500 capitalize">{item.type} • {item.rarity}</p>
+                      <h3 className="font-medium text-slate-900 truncate">{item.nombre}</h3>
+                      <p className="text-sm text-slate-500">{item.dano_min}-{item.dano_max} DMG • {item.critico}% CRIT</p>
                     </div>
-                    <span className="text-sm font-medium text-amber-600">{item.value}g</span>
+                    <span className="text-sm font-medium text-blue-600">{item.velocidad_ataque > 0 ? '+' : ''}{item.velocidad_ataque} SPD</span>
                   </Link>
                 ))}
               </div>
@@ -121,7 +123,7 @@ function Home() {
               <div className="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Sword className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-slate-900 mb-2">{items.length}+ Items</h3>
+              <h3 className="font-semibold text-slate-900 mb-2">{itemsArray.length}+ Armas</h3>
               <p className="text-sm text-slate-600">Armas, armaduras, consumibles y materiales con stats completos.</p>
             </div>
             <div className="p-6 bg-white rounded-xl">
