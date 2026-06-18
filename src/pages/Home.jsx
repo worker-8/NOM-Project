@@ -58,7 +58,43 @@ function Home() {
 
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-slate-900 flex items-center">
+                <Users className="w-5 h-5 text-purple-600" />
+                Maids Destacadas
+              </h2>
+              <Link to="/maids" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                Ver todas →
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {featuredMaids.map((maid) => (
+                <Link
+                  key={maid.id}
+                  to={`/maids/${maid.id}`}
+                  className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200 hover:border-purple-300 hover:shadow-sm transition-all"
+                >
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-700 font-bold flex-shrink-0">
+                    {maid.name.charAt(0)}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-medium text-slate-900 truncate text-sm">{maid.name}</h3>
+                    <p className="text-xs text-slate-500 capitalize">{maid.type}</p>
+                  </div>
+                  <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
+                    maid.unlocked ? 'bg-emerald-100 text-emerald-600' : 'bg-slate-100 text-slate-400'
+                  }`}>
+                    {maid.unlocked
+                      ? <Unlock className="w-3 h-3" />
+                      : <Lock className="w-3 h-3" />
+                    }
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 mt-12">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
@@ -117,43 +153,6 @@ function Home() {
                   </Link>
                 ))}
               </div>
-            </div>
-          </div>
-
-          <div className="mt-12">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                <Users className="w-5 h-5 text-purple-600" />
-                Maids Destacadas
-              </h2>
-              <Link to="/maids" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
-                Ver todas →
-              </Link>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {featuredMaids.map((maid) => (
-                <Link
-                  key={maid.id}
-                  to={`/maids/${maid.id}`}
-                  className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200 hover:border-purple-300 hover:shadow-sm transition-all"
-                >
-                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-700 font-bold flex-shrink-0">
-                    {maid.name.charAt(0)}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-medium text-slate-900 truncate text-sm">{maid.name}</h3>
-                    <p className="text-xs text-slate-500 capitalize">{maid.type}</p>
-                  </div>
-                  <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
-                    maid.unlocked ? 'bg-emerald-100 text-emerald-600' : 'bg-slate-100 text-slate-400'
-                  }`}>
-                    {maid.unlocked
-                      ? <Unlock className="w-3 h-3" />
-                      : <Lock className="w-3 h-3" />
-                    }
-                  </span>
-                </Link>
-              ))}
             </div>
           </div>
         </div>
