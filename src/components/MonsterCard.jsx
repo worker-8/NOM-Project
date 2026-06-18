@@ -31,7 +31,7 @@ function MonsterCard({ monster }) {
         </div>
         <div className="flex items-center gap-1.5">
           <Zap className="w-4 h-4 text-blue-500" />
-          <span className="font-medium">{monster.velocidad} SPD</span>
+          <span className="font-medium">{monster.velocidad} Spd Mov.</span>
         </div>
         <div className="flex items-center gap-1.5">
           <Coins className="w-4 h-4 text-yellow-500" />

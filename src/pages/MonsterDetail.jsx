@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { ArrowLeft, Heart, Swords, Zap, Coins, FileCode } from 'lucide-react'
+import { ArrowLeft, Heart, Swords, Footprints, Coins, FileCode } from 'lucide-react'
 import monstersData from '../data/enemies.json'
 
 function MonsterDetail() {
@@ -75,9 +75,9 @@ function MonsterDetail() {
               <div className="bg-white p-4 rounded-xl border border-slate-200 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-blue-600" />
+                    <Footprints className="w-5 h-5 text-blue-600" />
                   </div>
-                  <span className="text-slate-600">Velocidad</span>
+                  <span className="text-slate-600">Spd Mov.</span>
                 </div>
                 <span className="text-xl font-bold text-slate-900">{monster.velocidad}</span>
               </div>
