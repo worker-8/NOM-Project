@@ -1,0 +1,27 @@
+{
+  "comun": {
+	"nombre": "Común",
+	"multiplicador": 1.0,
+	"color": "#FFFFFF"
+  },
+  "rara": {
+	"nombre": "Rara",
+	"multiplicador": 1.5,
+	"color": "#2ECC71"
+  },
+  "epica": {
+	"nombre": "Épica",
+	"multiplicador": 2.5,
+	"color": "#3498DB"
+  },
+  "legendaria": {
+	"nombre": "Legendaria",
+	"multiplicador": 4.0,
+	"color": "#9B59B6"
+  },
+  "mitica": {
+	"nombre": "Mítica",
+	"multiplicador": 7.0,
+	"color": "#F1C40F"
+  }
+}

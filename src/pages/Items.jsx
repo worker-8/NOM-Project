@@ -1,23 +1,23 @@
 import { useState, useMemo } from 'react'
 import SearchFilter from '../components/SearchFilter'
 import ItemCard from '../components/ItemCard'
-import itemsData from '../data/items.json'
+import { getAllItems } from '../utils/items'
 
 function Items() {
   const [searchTerm, setSearchTerm] = useState('')
   const [typeFilter, setTypeFilter] = useState('all')
 
-  // Convertir el objeto de items a array con IDs
-  const items = useMemo(() => {
-    return Object.entries(itemsData).map(([id, data]) => ({
-      id,
-      ...data
-    }))
-  }, [])
+  const items = useMemo(() => getAllItems(), [])
 
   const typeOptions = [
     { value: 'all', label: 'Todos los tipos' },
-    { value: 'arma', label: 'Armas' }
+    { value: 'arma', label: 'Armas' },
+    { value: 'accesorio', label: 'Accesorios' },
+    { value: 'botas', label: 'Botas' },
+    { value: 'guantes', label: 'Guantes' },
+    { value: 'cabeza', label: 'Cabeza' },
+    { value: 'traje', label: 'Trajes' },
+    { value: 'reliquia', label: 'Reliquias' },
   ]
 
   const filteredItems = useMemo(() => {
@@ -33,15 +33,15 @@ function Items() {
     <div className="py-8 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Armas</h1>
-          <p className="text-slate-600">Catálogo de armas con estadísticas de daño, crítico y velocidad.</p>
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">Items</h1>
+          <p className="text-slate-600">Catálogo de items: armas, accesorios, trajes, reliquias y más.</p>
         </div>
 
         <div className="space-y-3 mb-6">
           <SearchFilter
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}
-            placeholder="Buscar armas..."
+            placeholder="Buscar items..."
           />
           <SearchFilter
             filters={typeOptions}
@@ -51,7 +51,7 @@ function Items() {
         </div>
 
         <div className="mb-4 text-sm text-slate-500">
-          Mostrando {filteredItems.length} de {items.length} armas
+          Mostrando {filteredItems.length} de {items.length} items
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -62,7 +62,7 @@ function Items() {
 
         {filteredItems.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-slate-500">No se encontraron armas con esos filtros.</p>
+            <p className="text-slate-500">No se encontraron items con esos filtros.</p>
           </div>
         )}
       </div>

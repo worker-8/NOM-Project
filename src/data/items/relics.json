@@ -1,0 +1,35 @@
+{
+	"bragas_algodon": {
+		"id": "bragas_algodon",
+		"nombre": "Bragas de Algodón",
+		"tipo": "reliquia",
+		"slot": "reliquia",
+		"dano_min": 1,
+		"dano_max": 2,
+		"critico": 1,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 2.0
+	},
+	"bragas_encaje": {
+		"id": "bragas_encaje",
+		"nombre": "Bragas de Encaje",
+		"tipo": "reliquia",
+		"slot": "reliquia",
+		"dano_min": 0,
+		"dano_max": 3,
+		"critico": 4,
+		"velocidad_ataque": 0.01,
+		"oro_bonus": 3.0
+	},
+	"bragas_batalla": {
+		"id": "bragas_batalla",
+		"nombre": "Bragas de Batalla",
+		"tipo": "reliquia",
+		"slot": "reliquia",
+		"dano_min": 3,
+		"dano_max": 5,
+		"critico": 2,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 1.0
+	}
+}

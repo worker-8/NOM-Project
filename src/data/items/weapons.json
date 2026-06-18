@@ -1,0 +1,122 @@
+{
+	"pistola": {
+		"id": "pistola",
+		"nombre": "Pistola",
+		"maid_tipo": "maid_pistola",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 1,
+		"dano_max": 3,
+		"critico": 5,
+		"velocidad_ataque": 0.1,
+		"oro_bonus": 0.0
+	},
+	"revolver": {
+		"id": "revolver",
+		"nombre": "Revolver",
+		"maid_tipo": "maid_revolver",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 3,
+		"dano_max": 7,
+		"critico": 12,
+		"velocidad_ataque": -0.1,
+		"oro_bonus": 0.0
+	},
+	"uzi": {
+		"id": "uzi",
+		"nombre": "UZI",
+		"maid_tipo": "maid_uzi",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 1,
+		"dano_max": 4,
+		"critico": 7,
+		"velocidad_ataque": 0.35,
+		"oro_bonus": 0.0
+	},
+	"minigun": {
+		"id": "minigun",
+		"nombre": "Minigun",
+		"maid_tipo": "maid_minigun",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 4,
+		"dano_max": 9,
+		"critico": 10,
+		"velocidad_ataque": 0.45,
+		"oro_bonus": 0.0
+	},
+	"rifle_asalto": {
+		"id": "rifle_asalto",
+		"nombre": "Rifle de Asalto",
+		"maid_tipo": "maid_rifle_asalto",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 6,
+		"dano_max": 14,
+		"critico": 15,
+		"velocidad_ataque": 0.15,
+		"oro_bonus": 0.0
+	},
+	"melee": {
+		"id": "melee",
+		"nombre": "Arma Cuerpo a Cuerpo",
+		"maid_tipo": "maid_melee",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 8,
+		"dano_max": 18,
+		"critico": 20,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 0.0
+	},
+	"bazuka": {
+		"id": "bazuka",
+		"nombre": "Bazuka",
+		"maid_tipo": "maid_bazuka",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 20,
+		"dano_max": 45,
+		"critico": 25,
+		"velocidad_ataque": -0.7,
+		"oro_bonus": 0.0
+	},
+	"escopeta": {
+		"id": "escopeta",
+		"nombre": "Escopeta",
+		"maid_tipo": "maid_escopeta",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 10,
+		"dano_max": 24,
+		"critico": 22,
+		"velocidad_ataque": -0.3,
+		"oro_bonus": 0.0
+	},
+	"francotirador": {
+		"id": "francotirador",
+		"nombre": "Francotirador",
+		"maid_tipo": "maid_francotirador",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 25,
+		"dano_max": 60,
+		"critico": 40,
+		"velocidad_ataque": -0.8,
+		"oro_bonus": 0.0
+	},
+	"ninja": {
+		"id": "ninja",
+		"nombre": "Arma Ninja",
+		"maid_tipo": "maid_ninja",
+		"tipo": "arma",
+		"slot": "arma",
+		"dano_min": 7,
+		"dano_max": 16,
+		"critico": 30,
+		"velocidad_ataque": 0.25,
+		"oro_bonus": 0.0
+	}
+}

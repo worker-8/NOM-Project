@@ -1,0 +1,35 @@
+{
+	"liston_rojo": {
+		"id": "liston_rojo",
+		"nombre": "Listón Rojo",
+		"tipo": "cabeza",
+		"slot": "cabeza",
+		"dano_min": 0,
+		"dano_max": 1,
+		"critico": 2,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 0.0
+	},
+	"mono_maid": {
+		"id": "mono_maid",
+		"nombre": "Moño de Maid",
+		"tipo": "cabeza",
+		"slot": "cabeza",
+		"dano_min": 1,
+		"dano_max": 1,
+		"critico": 1,
+		"velocidad_ataque": 0.02,
+		"oro_bonus": 0.0
+	},
+	"tiara_cafeteria": {
+		"id": "tiara_cafeteria",
+		"nombre": "Tiara de Cafetería",
+		"tipo": "cabeza",
+		"slot": "cabeza",
+		"dano_min": 0,
+		"dano_max": 2,
+		"critico": 3,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 1.0
+	}
+}

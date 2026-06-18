@@ -1,0 +1,35 @@
+{
+	"guantes_algodon": {
+		"id": "guantes_algodon",
+		"nombre": "Guantes de Algodón",
+		"tipo": "guantes",
+		"slot": "guantes",
+		"dano_min": 1,
+		"dano_max": 1,
+		"critico": 1,
+		"velocidad_ataque": 0.01,
+		"oro_bonus": 0.0
+	},
+	"guantes_combate": {
+		"id": "guantes_combate",
+		"nombre": "Guantes de Combate",
+		"tipo": "guantes",
+		"slot": "guantes",
+		"dano_min": 2,
+		"dano_max": 3,
+		"critico": 3,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 0.0
+	},
+	"guantes_servicio": {
+		"id": "guantes_servicio",
+		"nombre": "Guantes de Servicio",
+		"tipo": "guantes",
+		"slot": "guantes",
+		"dano_min": 0,
+		"dano_max": 1,
+		"critico": 0,
+		"velocidad_ataque": 0.04,
+		"oro_bonus": 1.0
+	}
+}

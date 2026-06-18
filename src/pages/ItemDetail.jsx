@@ -1,16 +1,11 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { ArrowLeft, Swords, Sparkles, Gauge, FileCode } from 'lucide-react'
-import itemsData from '../data/items.json'
+import { ArrowLeft, Swords, Sparkles, Gauge, FileCode, Coins } from 'lucide-react'
+import { getAllItems } from '../utils/items'
 
 function ItemDetail() {
   const { id } = useParams()
 
-  // Convertir el objeto de items a array para buscar por ID
-  const items = Object.entries(itemsData).map(([key, data]) => ({
-    id: key,
-    ...data
-  }))
-
+  const items = getAllItems()
   const item = items.find(i => i.id === id)
 
   if (!item) {
@@ -37,12 +32,19 @@ function ItemDetail() {
 
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700 border border-slate-200 uppercase">
-                    {item.maid_tipo}
-                  </span>
                   <span className="px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700 border border-slate-200 capitalize">
                     {item.tipo}
                   </span>
+                  {item.slot && (
+                    <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200 capitalize">
+                      Slot: {item.slot}
+                    </span>
+                  )}
+                  {item.maid_tipo && (
+                    <span className="px-3 py-1 rounded-full text-sm font-medium bg-amber-50 text-amber-700 border border-amber-200 uppercase">
+                      {item.maid_tipo}
+                    </span>
+                  )}
                 </div>
 
                 <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
@@ -60,7 +62,7 @@ function ItemDetail() {
           <div className="border-t border-slate-200 bg-slate-50 p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
               <Swords className="w-5 h-5" />
-              Estadísticas del Arma
+              Estadísticas
             </h2>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -95,6 +97,18 @@ function ItemDetail() {
                   {item.velocidad_ataque > 0 ? '+' : ''}{item.velocidad_ataque}
                 </span>
               </div>
+
+              {item.oro_bonus !== undefined && (
+                <div className="bg-white p-4 rounded-xl border border-slate-200 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                      <Coins className="w-5 h-5 text-yellow-600" />
+                    </div>
+                    <span className="text-slate-600">Oro Bonus</span>
+                  </div>
+                  <span className="text-xl font-bold text-yellow-600">x{item.oro_bonus}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>

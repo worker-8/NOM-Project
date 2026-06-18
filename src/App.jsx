@@ -6,6 +6,8 @@ import Items from './pages/Items'
 import ItemDetail from './pages/ItemDetail'
 import Monsters from './pages/Monsters'
 import MonsterDetail from './pages/MonsterDetail'
+import Maids from './pages/Maids'
+import MaidDetail from './pages/MaidDetail'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/items/:id" element={<ItemDetail />} />
           <Route path="/monsters" element={<Monsters />} />
           <Route path="/monsters/:id" element={<MonsterDetail />} />
+          <Route path="/maids" element={<Maids />} />
+          <Route path="/maids/:id" element={<MaidDetail />} />
         </Routes>
       </main>
       <Footer />

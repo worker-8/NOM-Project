@@ -1,0 +1,35 @@
+{
+	"traje_maid_basico": {
+		"id": "traje_maid_basico",
+		"nombre": "Traje de Maid Básico",
+		"tipo": "traje",
+		"slot": "traje",
+		"dano_min": 1,
+		"dano_max": 2,
+		"critico": 0,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 1.0
+	},
+	"traje_maid_combate": {
+		"id": "traje_maid_combate",
+		"nombre": "Traje de Maid de Combate",
+		"tipo": "traje",
+		"slot": "traje",
+		"dano_min": 2,
+		"dano_max": 4,
+		"critico": 2,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 0.0
+	},
+	"traje_maid_cafeteria": {
+		"id": "traje_maid_cafeteria",
+		"nombre": "Traje de Maid Cafetería",
+		"tipo": "traje",
+		"slot": "traje",
+		"dano_min": 0,
+		"dano_max": 2,
+		"critico": 1,
+		"velocidad_ataque": 0.03,
+		"oro_bonus": 2.0
+	}
+}

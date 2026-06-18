@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import SearchFilter from '../components/SearchFilter'
 import MonsterCard from '../components/MonsterCard'
-import monstersData from '../data/monsters.json'
+import monstersData from '../data/enemies.json'
 
 function Monsters() {
   const [searchTerm, setSearchTerm] = useState('')

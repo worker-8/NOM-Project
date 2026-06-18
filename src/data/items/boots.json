@@ -1,0 +1,35 @@
+{
+	"botas_maid": {
+		"id": "botas_maid",
+		"nombre": "Botas de Maid",
+		"tipo": "botas",
+		"slot": "botas",
+		"dano_min": 0,
+		"dano_max": 1,
+		"critico": 1,
+		"velocidad_ataque": 0.03,
+		"oro_bonus": 0.0
+	},
+	"tacos_elegantes": {
+		"id": "tacos_elegantes",
+		"nombre": "Tacos Elegantes",
+		"tipo": "botas",
+		"slot": "botas",
+		"dano_min": 1,
+		"dano_max": 2,
+		"critico": 2,
+		"velocidad_ataque": 0.02,
+		"oro_bonus": 1.0
+	},
+	"botas_combate": {
+		"id": "botas_combate",
+		"nombre": "Botas de Combate",
+		"tipo": "botas",
+		"slot": "botas",
+		"dano_min": 2,
+		"dano_max": 4,
+		"critico": 1,
+		"velocidad_ataque": -0.01,
+		"oro_bonus": 0.0
+	}
+}

@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { ArrowLeft, Heart, Swords, Zap, Coins, FileCode } from 'lucide-react'
-import monstersData from '../data/monsters.json'
+import monstersData from '../data/enemies.json'
 
 function MonsterDetail() {
   const { id } = useParams()

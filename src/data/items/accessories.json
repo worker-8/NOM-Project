@@ -1,0 +1,35 @@
+{
+	"anillo_dorado": {
+		"id": "anillo_dorado",
+		"nombre": "Anillo Dorado",
+		"tipo": "accesorio",
+		"slot": "accesorio_1",
+		"dano_min": 1,
+		"dano_max": 2,
+		"critico": 2,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 1.5
+	},
+	"collar_maid": {
+		"id": "collar_maid",
+		"nombre": "Collar de Maid",
+		"tipo": "accesorio",
+		"slot": "accesorio_2",
+		"dano_min": 0,
+		"dano_max": 1,
+		"critico": 3,
+		"velocidad_ataque": 0.02,
+		"oro_bonus": 1.0
+	},
+	"aretes_brillantes": {
+		"id": "aretes_brillantes",
+		"nombre": "Aretes Brillantes",
+		"tipo": "accesorio",
+		"slot": "accesorio_2",
+		"dano_min": 1,
+		"dano_max": 1,
+		"critico": 4,
+		"velocidad_ataque": 0.0,
+		"oro_bonus": 0.5
+	}
+}

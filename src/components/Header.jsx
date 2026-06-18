@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Sword, Shield, Home, Menu, X } from 'lucide-react'
+import { Sword, Shield, Home, Menu, X, Users } from 'lucide-react'
 import { useState } from 'react'
 
 function Header() {
@@ -10,6 +10,7 @@ function Header() {
     { path: '/', label: 'Inicio', icon: Home },
     { path: '/items', label: 'Items', icon: Sword },
     { path: '/monsters', label: 'Monstruos', icon: Shield },
+    { path: '/maids', label: 'Maids', icon: Users },
   ]
 
   const isActive = (path) => location.pathname === path

@@ -16,7 +16,7 @@ function ItemCard({ item }) {
             <h3 className="font-semibold text-slate-900 group-hover:text-slate-700 transition-colors">
               {item.nombre}
             </h3>
-            <span className="text-xs text-slate-500 uppercase">{item.maid_tipo}</span>
+            <span className="text-xs text-slate-500 uppercase">{item.maid_tipo || item.tipo}</span>
           </div>
         </div>
       </div>
