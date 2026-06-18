@@ -39,6 +39,56 @@
 			"dano_ataque": 1,
 			"oro_min": 15,
 			"oro_max": 25
-	  	}
+	  	},
+		{
+			"id":"zombi_andrajoso",
+			"nombre": "Zombi Andrajoso",
+			"scene": "res://scenes/enemies/zombi_andrajoso.tscn",
+			"vida": 80,
+			"velocidad": 8,
+			"dano_ataque": 12,
+			"oro_min": 6,
+			"oro_max": 12
+		},
+		{
+			"id":"golem_de_piedra",
+			"nombre": "Golem de Piedra",
+			"scene": "res://scenes/enemies/golem_de_piedra.tscn",
+			"vida": 300,
+			"velocidad": 5,
+			"dano_ataque": 25,
+			"oro_min": 20,
+			"oro_max": 40
+		},
+		{
+			"id":"sombra_veloz",
+			"nombre": "Sombra Veloz",
+			"scene": "res://scenes/enemies/sombra_veloz.tscn",
+			"vida": 40,
+			"velocidad": 70,
+			"dano_ataque": 7,
+			"oro_min": 10,
+			"oro_max": 18
+		},
+		{
+			"id":"hongo_venenoso",
+			"nombre": "Hongo Venenoso",
+			"scene": "res://scenes/enemies/hongo_venenoso.tscn",
+			"vida": 60,
+			"velocidad": 12,
+			"dano_ataque": 6,
+			"oro_min": 7,
+			"oro_max": 14
+		},
+		{
+			"id":"caballero_oscuro",
+			"nombre": "Caballero Oscuro",
+			"scene": "res://scenes/enemies/caballero_oscuro.tscn",
+			"vida": 200,
+			"velocidad": 18,
+			"dano_ataque": 20,
+			"oro_min": 25,
+			"oro_max": 50
+		}
 	]
 }
